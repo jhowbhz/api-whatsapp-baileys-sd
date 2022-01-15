@@ -50,5 +50,8 @@ https://chat.whatsapp.com/Bv5wGYFuS7oLHwfrd3V5GI
 
 Altere as variáveis ``WEBHOOK_URL`` e ``WEBHOOK_KEY``   
 
+### Servidor gratuito ilimitado
+https://whatsapp-srv08.apigratis.com.br
+
 ### Documentações
 <a href="https://whatsapp-srv08.apigratis.com.br/api-docs" target="_blank"> Swagger </a> | <a href="https://documenter.getpostman.com/view/11074732/UVXgMHmq" target="_blank"> Postman </a>
