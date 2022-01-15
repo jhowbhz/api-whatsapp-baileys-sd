@@ -43,6 +43,11 @@ http://localhost:9190
 ```bash
 nano .env
 ```
+
+### Grupo do WhatsApp
+
+https://chat.whatsapp.com/Bv5wGYFuS7oLHwfrd3V5GI
+
 Altere as variáveis ``WEBHOOK_URL`` e ``WEBHOOK_KEY``   
 
 ### Documentações
