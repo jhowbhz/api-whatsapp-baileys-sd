@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/salman0ansari/whatsapp-api-nodejs",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.5.0",
+    "@adiwajshing/baileys": "^*",
+    "socket.io": "^*",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
