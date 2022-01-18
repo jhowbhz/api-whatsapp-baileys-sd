@@ -4,6 +4,10 @@ const { WhatsAppInstance } = require("../Objects/instanceClass")
 const router = require('express').Router()
 const rateLimit = require("express-rate-limit");
 
+const httpServer = require("http").createServer(app);
+const options = { /* ... */ };
+const io = require("socket.io")(httpServer, options);
+
 const path = './Instances'
 global.WhatsAppInstances = {};
 
