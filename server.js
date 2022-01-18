@@ -1,5 +1,10 @@
 const express = require("express");
 const app = express()
+
+const httpServer = require("http").createServer(app);
+const options = { /* ... */ };
+const io = require("socket.io")(httpServer, options);
+
 const cors = require("cors");
 const morgan = require("morgan");
 const fs = require('fs')
@@ -30,6 +35,9 @@ app.use(getMessages);
 app.use(sendMessage);
 
 app.get('/', (req, res) => {
+
+    io.on("connection", socket => { "ok" });
+
     res.status(200)
     .send("Whatsapp API <br><a href='/api-docs'> /api-docs </a>")
 })

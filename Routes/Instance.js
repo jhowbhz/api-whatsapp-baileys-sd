@@ -24,7 +24,6 @@ router.get('/init', apiLimiter, async (req, res) => {
     const instance = new WhatsAppInstance();
     const data = await instance.init();
 
-
     WhatsAppInstances[data.key] = instance;
     res.json({
         error: false,

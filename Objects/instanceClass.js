@@ -3,17 +3,6 @@ const {
     MessageType,
     WAConnection,
     Mimetype,
-    WAMessage,
-    MessageInfo,
-    WAMetric,
-    ChatModification,
-    WAChat,
-    WANode,
-    WAMessageContent,
-    WAFlag,
-    WAChatIndex,
-    BaileysError,
-    WAMessageKey
 } = require("@adiwajshing/baileys")
 
 const QRCode = require("qrcode")
@@ -21,7 +10,6 @@ const { v4: uuidv4 } = require('uuid')
 const { ErrorHandler } = require("../Exceptions/InvalidNumber.exception")
 const fs = require("fs")
 const axios = require("axios")
-var io = require('socket.io');
 
 class WhatsAppInstance {
 
@@ -77,13 +65,6 @@ class WhatsAppInstance {
     setHandlers() {
         this.instance.conn?.on("qr", async (qrcode) => {
             this.instance.qrcode = await QRCode.toDataURL(qrcode);
-        });
-
-        io.sockets.on('connection', function (socket) {
-            socket.emit('news', { hello: 'world' });
-            socket.on('my other event', function (data) {
-              console.log(data);
-            });
         });
 
         this.instance.conn?.on("open", (data) => {
