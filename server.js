@@ -37,7 +37,6 @@ app.use(sendMessage);
 app.get('/', (req, res) => {
 
     io.on("connection", socket => { "ok" });
-    //io.emit("connection", socket => { "ok" });
 
     res.status(200)
     .send("Whatsapp API <br><a href='/api-docs'> /api-docs </a>")
