@@ -16,13 +16,15 @@ const apiLimiter = rateLimit({
     message: {
         error: true,
         message: "Too many accounts created from this IP, please try again after an hour"
-        }
+    }
   });
 
 // Initialize Instance
 router.get('/init', apiLimiter, async (req, res) => {
     const instance = new WhatsAppInstance();
     const data = await instance.init();
+
+
     WhatsAppInstances[data.key] = instance;
     res.json({
         error: false,
