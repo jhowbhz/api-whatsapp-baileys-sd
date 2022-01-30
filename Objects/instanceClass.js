@@ -1,7 +1,7 @@
 require('dotenv').config()
 const {
     MessageType,
-    WAConnection,
+    makeWALegacySocket,
     Mimetype,
 } = require("@adiwajshing/baileys")
 
@@ -308,7 +308,7 @@ class WhatsAppInstance {
     }
 
     init(whatsappData) {
-        const conn = new WAConnection();
+        const conn = new makeWALegacySocket();
         conn.logger.level = 'warn';
         if (whatsappData) {
             const path = `./Instances/${whatsappData}`;
